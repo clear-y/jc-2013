@@ -14,26 +14,29 @@
 		<title>{{ site.name }}</title>
 	</head>
 	<body>
-		<header>
+		<header class="main">
 			<div class="cntr">
-				<img src="#" alt="Me">
-				<h1>Hello, world.</h1>
-				<nav>
+				<img class="my_avatar" src="/assets/img/jake-cleary-avatar.jpg" alt="Me">
+				<h1>Hello, you.</h1>
+				<nav class="main">
 					<a href="/about"><i class="fa fa-user"></i></a>
 					<a href="https://twitter.com/jakecleary"><i class="fa fa-twitter"></i></a>
 					<a href="https://github.com/clear-y"><i class="fa fa-github"></i></a>
 				</nav>
+				<section class="intro">
+					<p>Hi, my name is Jake Cleary, a web developer and real life human from Worthing, United Kingdom.</p>
+				</section>
 			</div>
 		</header>
 
-		<main>
+		<main class="content_area">
 			<div class="cntr">
 				<ul class="posts">
 					{% for post in site.posts %}
 						<li class="post">
 							<a href="{{ post.url }}">
-								<h1 class="post_title">{{ post.title }}</h1>
-								<abbr title="" class="post_date">{{post.date}}</abbr>
+								<h3 class="post_title">{{ post.title }}</h3>
+								<abbr title="" class="post_date">{{post.date | date: "%d.%m.%Y"}}</abbr>
 							</a>
 						</li>
 					{% endfor %}
@@ -41,9 +44,9 @@
 			</div>
 		</main>
 		
-		<footer>
+		<footer class="main">
 			<div class="cntr">
-				hello
+
 			</div>
 		</footer>
 	</body>

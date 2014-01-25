@@ -1,22 +1,28 @@
 // mixins
 
 @mixin break($point) {
-  @if $point == large {
-    @media (min-width: 601px) { @content; }
-  }
-  @else if $point == medium {
-    @media (max-width: 600px)  { @content; }
-  }
-  @else if $point == small {
-    @media (max-width: 480px) { @content; }
-  }
-  @else if $point == tiny {
-    @media (max-width: 320px)  { @content; }
-  }
+  	@if $point == large {
+    	@media (min-width: 601px) { @content; }
+  	}
+  	@else if $point == medium {
+    	@media (max-width: 600px)  { @content; }
+  	}
+  	@else if $point == small {
+    	@media (max-width: 480px) { @content; }
+  	}
+  	@else if $point == tiny {
+    	@media (max-width: 320px)  { @content; }
+  	}
+}
+
+@mixin transition($value) {
+  	transition: $value;
+  	-webkit-transition: $value;
+	-moz-transiiton: $value;
 }
 
 // varibles
 
-$primary: #444444;
-$secondary: #c28324;
-$tertiary: #dddddd;
+$primary: #444444; // dark gray
+$secondary: #FF8300; // orange
+$tertiary: #dddddd; // very light

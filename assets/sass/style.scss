@@ -1,7 +1,53 @@
 @import "partials/base";
 
-h1 {
-	color: red;
+header.main {
+	padding: 10px 0;
+	h1 {
+		line-height: 1em;
+		padding-top: 1%;
+	}
+	.intro {
+		clear: both;
+	}
 }
 
-@import "partials/queries";
+nav.main {
+	a {
+		font-size: 1.4em;
+		margin-right: .5em;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.my_avatar {
+	border-radius: 50%;
+	width: 50%;
+	height: auto;
+	@include break(small) {
+		width: 30%;
+		margin: 0 2% 0 0;
+		float: left;
+	}
+}
+
+// posts
+
+.posts {
+	margin: 2em 0;
+}
+.post {
+	border-bottom: 1px solid $secondary;
+	padding: .6em .5em;
+	position: relative;
+	.post_title, .post_date {
+		line-height: 1em;
+		color: $primary;
+	}
+	.post_title {
+	}
+	.post_date {
+		font-size: .8em;
+	}
+}
