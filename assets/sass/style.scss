@@ -1,10 +1,12 @@
 @import "partials/base";
 
 header.main {
-	padding: 10px 0;
+	margin: 1em 0;
+	.cntr {
+		border-bottom: 1px solid $secondary;
+	}
 	h1 {
 		line-height: 1em;
-		padding-top: 1%;
 	}
 	.intro {
 		clear: both;
@@ -25,9 +27,10 @@ nav.main {
 	border-radius: 50%;
 	width: 50%;
 	height: auto;
+	min-width: 31px;
 	@include break(small) {
-		width: 30%;
-		margin: 0 2% 0 0;
+		width: 10%;
+		margin: 0 1em 1em 0;
 		float: left;
 	}
 }
@@ -36,11 +39,12 @@ nav.main {
 
 .posts {
 	margin: 2em 0;
+	.post {
+		border-bottom: 1px solid $secondary;
+		padding: .6em .5em;
+	}
 }
 .post {
-	border-bottom: 1px solid $secondary;
-	padding: .6em .5em;
-	position: relative;
 	.post_title, .post_date {
 		line-height: 1em;
 		color: $primary;
@@ -49,5 +53,11 @@ nav.main {
 	}
 	.post_date {
 		font-size: .8em;
+	}
+	header {
+		margin: 1em 0;
+		* {
+			line-height: 1em;
+		}
 	}
 }

@@ -5,6 +5,6 @@ date: 2014-01-25 15:00:00
 categories: test
 ---
 
-# Hello
+## Hello
 
 This is my first ever blog post in Jekyll. Exciting stuff is ahead!
