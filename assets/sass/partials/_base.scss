@@ -1,0 +1,11 @@
+@import "variables";
+@import "reset";
+@import "typography";
+@import "layout";
+
+.cntr {
+	width: 95%;
+	// document width
+	max-width: 600px;
+	margin: auto;
+}
