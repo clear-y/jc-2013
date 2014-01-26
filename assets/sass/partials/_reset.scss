@@ -19,12 +19,12 @@ img, svg {
 
 // groups (clearfix)
 
-.cf:before,
-.cf:after {
+.content-group:before,
+.content-group:after {
   content: " ";
   display: table;
 }
 
-.cf:after {
+.content-group:after {
   clear: both;
 }

@@ -5,13 +5,13 @@
     	@media (min-width: 601px) { @content; }
   	}
   	@else if $point == medium {
-    	@media (max-width: 600px)  { @content; }
+    	@media (min-width: 600px)  { @content; }
   	}
   	@else if $point == small {
-    	@media (max-width: 480px) { @content; }
+    	@media (min-width: 480px) { @content; }
   	}
   	@else if $point == tiny {
-    	@media (max-width: 320px)  { @content; }
+    	@media (min-width: 320px)  { @content; }
   	}
 }
 
@@ -23,6 +23,7 @@
 
 // varibles
 
-$primary: #444444; // dark gray
+$primary: #FFF; // dark gray
 $secondary: #FF8300; // orange
-$tertiary: #dddddd; // very light
+$tertiary: #444444; // very light
+$tertiary-compliment: lighten($tertiary, 10%);

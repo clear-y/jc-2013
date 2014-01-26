@@ -1,47 +1,74 @@
 @import "partials/base";
 
-header.main {
-	margin: 1em 0;
-	.cntr {
-		border-bottom: 1px solid $secondary;
-	}
-	h1 {
-		line-height: 1em;
-	}
-	.intro {
-		clear: both;
-	}
+* {
+	@include transition(all .3s ease);
 }
 
-nav.main {
-	a {
-		font-size: 1.4em;
-		margin-right: .5em;
-		&:last-child {
-			margin-right: 0;
+body {
+	background: $tertiary;
+}
+
+header.main {
+	padding: 1em 0;
+	background: $tertiary-compliment;
+	margin-bottom: 2em;
+	h1 {
+		display: inline-block;
+		line-height: 1.32em;
+		font-size: 2.4em;
+		color: $primary;
+		text-shadow: 1px 1px 0 $secondary;
+	}
+	.intro {
+		p {
+			margin-bottom: 0;
 		}
 	}
 }
 
 .my_avatar {
-	border-radius: 50%;
-	width: 50%;
+	border-radius: 8%;
+	width: 10%;
 	height: auto;
 	min-width: 31px;
+	margin: 0 1.5em 0 0;
+	float: left;
 	@include break(small) {
-		width: 10%;
-		margin: 0 1em 1em 0;
-		float: left;
+		width: 25%;
+		max-width: 3.1em;
+		max-height: 3.1em;
+	}
+}
+
+nav.main {
+	margin: 0 0 0 2em;
+	display: inline-block;
+	a {
+		color: $primary;
+		text-shadow: 1px 1px 0px $secondary;
+		font-size: 2em;
+		margin-right: .5em;
+		line-height: 1.32em;
+		&:last-child {
+			margin-right: 0;
+		}
+		i {
+			transition-duration: .1s;
+		}
+		&:hover i {
+			transform: scale(1.2);
+			-webkit-transform: scale(1.2);
+			-moz-transform: scale(1.2);
+		}
 	}
 }
 
 // posts
 
 .posts {
-	margin: 2em 0;
 	.post {
 		border-bottom: 1px solid $secondary;
-		padding: .6em .5em;
+		padding: .6em .1em;
 	}
 }
 .post {

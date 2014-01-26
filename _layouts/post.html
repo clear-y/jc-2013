@@ -1,13 +1,15 @@
 {% include header.html %}
 
-<main class="content_area">
+<main class="content_area" role="main">
 	<div class="cntr">
 		<article class="post">
-			<header>
+			<header class="post_header">
 				<h1>{{ page.title }}</h1>
 				<abbr class="meta">{{ page.date | date_to_string }}</abbr>
 			</header>
-			{{ content }}
+			<div class="post_content">
+				{{ content }}
+			</div>
 		</article>
 	</div>
 </main>
