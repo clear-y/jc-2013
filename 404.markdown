@@ -1,0 +1,6 @@
+---
+layout: page
+title: What happened?!
+---
+
+The page couldn't be found, sorry!

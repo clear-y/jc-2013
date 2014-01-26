@@ -1,3 +1,4 @@
 name: jakecleary.net
 markdown: redcarpet
 pygments: true
+include: [.htaccess]

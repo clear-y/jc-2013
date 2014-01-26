@@ -28,7 +28,7 @@ header.main {
 
 .my_avatar {
 	border-radius: 8%;
-	width: 10%;
+	width: 21.6%;
 	height: auto;
 	min-width: 31px;
 	margin: 0 1.5em 0 0;
@@ -41,8 +41,10 @@ header.main {
 }
 
 nav.main {
-	margin: 0 0 0 2em;
 	display: inline-block;
+	@include break(small) {
+		margin: 0 0 0 2em;
+	}
 	a {
 		color: $primary;
 		text-shadow: 1px 1px 0px $secondary;
