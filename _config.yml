@@ -2,3 +2,4 @@ name: jakecleary.net
 markdown: redcarpet
 pygments: true
 include: [.htaccess]
+url: http://jakecleary.net/beta

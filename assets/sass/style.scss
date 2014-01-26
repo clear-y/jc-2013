@@ -69,8 +69,6 @@ nav.main {
 
 .posts {
 	position: relative;
-	perspective: 800;
-	-webkit-perspective: 3000;
 	.post {
 		margin-bottom: 1em;
 		transform-style: preserve-3d;
@@ -108,6 +106,10 @@ nav.main {
 		.post_date {
 			float: right;
 			line-height: 22px;
+			display: none;
+			@include break(small) {
+				display: block;
+			}
 		}
 	}
 }
