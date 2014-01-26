@@ -8,10 +8,19 @@
 		
 		<ul class="posts">
 			{% for post in site.posts %}
-				<li class="post">
-					<a href="{{ post.url }}">
-						<h3 class="post_title">{{ post.title }}</h3>
-					</a>
+				<li class="post content-group">
+					<div class="side is_back">
+						<a href="{{ post.url }}">
+							<h3 class="post_title">{{ post.title }}</h3>
+							<abbr class="post_date">{{ post.date | date: "%d.%m.%y"}}</abbr>
+						</a>
+					</div>
+					<div class="side is_front">
+						<a href="{{ post.url }}">
+							<h3 class="post_title">{{ post.title }}</h3>
+							<abbr class="post_date">{{ post.date | date: "%d.%m.%y"}}</abbr>
+						</a>
+					</div>
 				</li>
 			{% endfor %}
 		</ul>
