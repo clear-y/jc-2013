@@ -11,13 +11,14 @@ body {
 header.main {
 	padding: 1em 0;
 	background: $tertiary-compliment;
-	margin-bottom: 2em;
+	margin-bottom: 0em;
 	h1 {
 		display: inline-block;
 		line-height: 1.32em;
 		font-size: 2.4em;
+		font-weight: 300;
 		color: $primary;
-		text-shadow: 1px 1px 0 $secondary;
+		//text-shadow: 1px 1px 0 $secondary;
 	}
 	.intro {
 		p {
@@ -28,13 +29,13 @@ header.main {
 
 .my_avatar {
 	border-radius: 8%;
-	width: 21.6%;
+	width: 2em;
 	height: auto;
 	min-width: 31px;
 	margin: 0 1.5em 0 0;
 	float: left;
 	@include break(small) {
-		width: 25%;
+		width: 6em;
 		max-width: 3.1em;
 		max-height: 3.1em;
 	}
@@ -47,7 +48,7 @@ nav.main {
 	}
 	a {
 		color: $primary;
-		text-shadow: 1px 1px 0px $secondary;
+		//text-shadow: 1px 1px 0px $secondary;
 		font-size: 2em;
 		margin-right: .5em;
 		line-height: 1.32em;
@@ -69,14 +70,20 @@ nav.main {
 
 .posts {
 	position: relative;
+	-webkit-perspective: 2000px;
 	.post {
 		margin-bottom: 1em;
 		transform-style: preserve-3d;
 		-webkit-transform-style: preserve-3d;
-		transition-duration: .3s;
+		transition-duration: .2s;
 		width: 100%;
 		height: 42px;
 		-webkit-backface-visibility: hidden;
+
+		// temp
+		width: 120px;
+		height: 120px;
+		
 		.side {
 			position: absolute;
 			width: 100%;
@@ -85,16 +92,16 @@ nav.main {
 		}
 		.is_front {
 			background: $tertiary-compliment;
-			-webkit-transform: rotateX(0deg) translateZ(21px);
+			-webkit-transform: rotateX(0deg) translateZ(60px);
 		}
 		.is_back {
 			background: $secondary;
-			-webkit-transform: rotateX(-90deg) translateZ( 21px );
+			-webkit-transform: rotateX(-90deg) translateZ( 60px );
 			bottom: 0;
 		}
 		&:hover {
 			-webkit-transform: rotateX(90deg);
-			top: -21px;
+			top: -60px;
 		}	
 		a {
 			overflow: hidden;
@@ -102,6 +109,7 @@ nav.main {
 		}
 		.post_title {
 			float: left;
+			font-size: 1.2em;
 		}
 		.post_date {
 			float: right;
